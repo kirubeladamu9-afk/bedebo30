@@ -57,12 +57,12 @@ export default function Page() {
             <OurStory />
 
             <section id="solutions" className="scroll-mt-24">
-                <SectionTitle label="OUR SOLUTIONS" title="Our" highlight="Solutions" description="Tailored solutions designed to help your business grow." headingId="solutions-title" />
+                <SectionTitle label="OUR SOLUTIONS" title="Our" highlight="Solutions" description="We have a wide range of solutions that we have provided" headingId="solutions-title" />
 
                 <div className="mt-10 grid grid-cols-1 items-stretch gap-6 px-6 md:grid-cols-2 md:gap-4 md:px-16 lg:grid-cols-4 lg:px-24 xl:px-32">
                     {featuresData.map((feature) => (
-                        <div key={feature.title} className="flex h-full min-h-[320px] flex-col items-start space-y-3 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-800/20">
-                            <feature.icon className="mt-4 size-8 text-[#3DB268]" strokeWidth={1.3} />
+                        <div key={feature.title} className="flex h-full min-h-[320px] flex-col items-center space-y-3 rounded-xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#3DB268]/50 hover:shadow-lg dark:border-slate-800 dark:bg-slate-800/20">
+                            <feature.icon className="mt-4 size-10 text-[#3DB268]" strokeWidth={1.3} />
                             <h3 className="min-h-[2.6em] text-base font-medium leading-[1.3]">{feature.title}</h3>
                             <p className="text-[0.9rem] leading-[1.6] text-slate-400">{feature.description}</p>
                         </div>
