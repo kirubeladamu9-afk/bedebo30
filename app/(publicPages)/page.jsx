@@ -9,7 +9,6 @@ import GetInvolved from "@/sections/GetInvolved";
 import Traceability from "@/sections/Traceability";
 import OurStory from "@/sections/OurStory";
 import OurBlogs from "@/sections/OurBlogs";
-import { VideoIcon } from "lucide-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -21,36 +20,16 @@ export default function Page() {
                 <div className="mx-auto max-w-7xl">
                     <div className="grid min-h-0 grid-cols-1 items-center gap-12 pt-28 md:min-h-[calc(100svh-4rem)] pb-16 md:grid-cols-2 md:gap-10 md:pt-24 md:pb-14 lg:gap-16">
                         <div className="flex flex-col items-start">
-                            <div className="flex flex-wrap items-center gap-3 rounded-full border border-slate-300 bg-white/70 p-1.5 pr-4 dark:border-slate-600 dark:bg-slate-600/20">
-                                <div className="flex items-center -space-x-3">
-                                    <Image className="size-7 rounded-full" height={50} width={50}
-                                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
-                                        alt="userImage1" />
-                                    <Image className="size-7 rounded-full" height={50} width={50}
-                                        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
-                                        alt="userImage2" />
-                                    <Image className="size-7 rounded-full" height={50} width={50}
-                                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
-                                        alt="userImage3" />
-                                </div>
-                                <p className="text-xs">Join community of 1m+ founders </p>
-                            </div>
-                            <h1 className="mt-6 max-w-xl text-5xl/15 font-semibold md:text-[52px]/15 lg:text-[60px]/17">
-                                Every startup begins with{" "}
-                                <span className="bg-gradient-to-r from-[#267A47] dark:from-[#75D59A] to-[#2B844B] dark:to-[#B5E8C6] bg-clip-text text-transparent">spark</span>
+                            <h1 className="max-w-xl text-4xl leading-[1.12] font-semibold sm:text-5xl md:max-w-2xl md:text-[48px] lg:text-[52px]">
+                                Empowering Ethiopian{" "}
+                                <span className="bg-gradient-to-r from-[#267A47] dark:from-[#75D59A] to-[#2B844B] dark:to-[#B5E8C6] bg-clip-text text-transparent">Agriculture Through Innovation</span>
                             </h1>
-                            <p className="mt-5 max-w-lg text-base dark:text-slate-300">
-                                Our latest thoughts, trends, and tools, written to help you learn, build, and grow faster.
+                            <p className="mt-5 max-w-lg text-lg font-medium dark:text-slate-200">
+                                Empowering Ethiopian Agriculture Through Innovation
                             </p>
-                            <div className="mt-8 flex flex-wrap items-center gap-3">
-                                <button className="h-11 rounded-md bg-[#267A47] px-5 text-white transition hover:bg-[#1E663A] sm:px-6">
-                                    Get started
-                                </button>
-                                <button className="flex h-11 items-center gap-2 rounded-md border border-[#267A47] px-5 text-slate-600 transition dark:text-white sm:px-6">
-                                    <VideoIcon strokeWidth={1} />
-                                    <span>Watch demo</span>
-                                </button>
-                            </div>
+                            <p className="mt-4 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300">
+                                At Bedebo, we are revolutionizing the agricultural value chain in Ethiopia. Through digital platforms and eco-friendly energy solutions, we are enhancing livelihoods, reducing post-harvest losses, and empowering small-scale farmers and women. Join us on our journey towards a sustainable agricultural future
+                            </p>
                         </div>
                         <div aria-hidden="true" className="relative mx-auto w-full max-w-xl rounded-[30px] border border-[#3DB268]/25 bg-[#3DB268]/[0.07] p-3 shadow-[0_28px_90px_rgba(61,178,104,0.16)] sm:p-5">
                             <div className="absolute -right-8 -top-10 size-40 rounded-full bg-[#3DB268]/20 blur-3xl" />
