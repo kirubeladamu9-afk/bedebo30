@@ -1,6 +1,5 @@
 import Image from "next/image";
 import SectionTitle from "@/components/SectionTitle";
-import { Lightbulb, ShieldCheck, Star } from "lucide-react";
 
 export default function OurStory() {
     return (
@@ -22,38 +21,18 @@ export default function OurStory() {
                         className="section-header--flush"
                         headingId="our-story-title"
                         description={(
-                            <div className="space-y-4 text-base leading-7">
-                                <p>We bring curious minds and thoughtful design together to help teams do their best work.</p>
-                                <p>From the first spark to a product people love, we partner with ambitious founders to make good ideas real.</p>
-                            </div>
+                            <p className="about-description">
+                                Founded by visionaries from the Ethiopian diaspora, Bedebo is committed to transforming Ethiopian agriculture into a sustainable, productive, and profitable sector. Our integrated approach brings modern technology and renewable energy solutions to the heart of Ethiopia&apos;s farming communities.
+                            </p>
                         )}
                     />
-                    <div className="mt-7 flex items-center gap-4">
-                        <span className="text-2xl font-semibold text-slate-900 dark:text-white">A+</span>
-                        <span className="h-8 w-px bg-slate-200 dark:bg-slate-700" />
-                        <div>
-                            <p className="text-sm font-medium text-slate-700 dark:text-slate-200">4.6 / 5.0</p>
-                            <div className="mt-1 flex items-center gap-0.5 text-amber-500" aria-label="5 out of 5 stars">
-                                {[0, 1, 2, 3, 4].map((star) => (
-                                    <Star key={star} size={14} fill="currentColor" strokeWidth={1.5} />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mt-8 grid gap-4 border-t border-slate-200 pt-6 dark:border-slate-800">
-                        <div className="flex items-center gap-3">
-                            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#3DB268] to-[#267A47] text-white shadow-md shadow-[#3DB268]/20">
-                                <Lightbulb size={19} strokeWidth={1.8} />
-                            </span>
-                            <p className="text-sm font-medium text-slate-700 dark:text-slate-200">Ideas shaped into meaningful work.</p>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                                <ShieldCheck size={19} strokeWidth={1.8} />
-                            </span>
-                            <p className="text-sm font-medium text-slate-700 dark:text-slate-200">A trusted partner at every step.</p>
-                        </div>
-                    </div>
+                    <blockquote className="about-quote">
+                        <p>
+                            <span className="about-quote-mark about-quote-mark--open" aria-hidden="true">“</span>
+                            To leverage digital innovation and sustainable energy to improve market access,{" "}
+                            <span className="about-quote-ending">productivity<span className="about-quote-mark about-quote-mark--close" aria-hidden="true">”</span></span>
+                        </p>
+                    </blockquote>
                 </div>
             </div>
         </section>
