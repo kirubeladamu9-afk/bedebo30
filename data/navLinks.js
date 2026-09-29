@@ -8,6 +8,10 @@ export const navLinks = [
         href: "#solutions",
     },
     {
+        name: "Impact",
+        href: "#impact",
+    },
+    {
         name: "Pricing",
         href: "#pricing",
     },
