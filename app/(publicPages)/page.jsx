@@ -117,17 +117,19 @@ export default function Page() {
 
             <OurStory />
 
-            <SectionTitle text1="FEATURES" text2="Built for builders" text3="Components, patterns and pages — everything you need to ship." />
+            <section id="solutions" className="scroll-mt-24">
+                <SectionTitle text1="OUR SOLUTIONS" text2="Our Solutions" text3="Tailored solutions designed to help your business grow." />
 
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-32">
-                {featuresData.map((feature, index) => (
-                    <div key={index} className="p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
-                        <feature.icon className="text-[#2F8D54] size-8 mt-4" strokeWidth={1.3} />
-                        <h3 className="text-base font-medium">{feature.title}</h3>
-                        <p className="text-slate-400 line-clamp-2">{feature.description}</p>
-                    </div>
-                ))}
-            </div>
+                <div className="mt-10 grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:gap-4 md:px-16 lg:grid-cols-4 lg:px-24 xl:px-32">
+                    {featuresData.map((feature, index) => (
+                        <div key={index} className="h-56 space-y-3 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-800/20">
+                            <feature.icon className="mt-4 size-8 text-[#3DB268]" strokeWidth={1.3} />
+                            <h3 className="truncate whitespace-nowrap text-base font-medium">{feature.title}</h3>
+                            <p className="line-clamp-3 text-slate-400">{feature.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             <Pricing />
 
