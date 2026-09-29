@@ -8,10 +8,6 @@ export const faqsData = [
         answer: "Yes, we offer a 14-day free trial with full access to all features. No credit card is required to start the trial."
     },
     {
-        question: "Can I change my subscription plan later?",
-        answer: "Absolutely! You can upgrade or downgrade your plan at any time from your account settings."
-    },
-    {
         question: "How is my data secured?",
         answer: "We use industry-standard encryption, regular security audits, and secure data centers to ensure your data is safe and protected."
     },

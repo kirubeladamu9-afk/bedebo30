@@ -8,6 +8,7 @@ import OurImpact from "@/sections/OurImpact";
 import GetInvolved from "@/sections/GetInvolved";
 import Traceability from "@/sections/Traceability";
 import OurStory from "@/sections/OurStory";
+import OurBlogs from "@/sections/OurBlogs";
 import { VideoIcon } from "lucide-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -138,6 +139,8 @@ export default function Page() {
             <GetInvolved />
 
             <Traceability />
+
+            <OurBlogs />
 
             <FaqSection />
 
