@@ -6,6 +6,7 @@ import { featuresData } from "@/data/featuresData";
 import { FaqSection } from "@/sections/FaqSection";
 import Pricing from "@/sections/Pricing";
 import OurImpact from "@/sections/OurImpact";
+import GetInvolved from "@/sections/GetInvolved";
 import OurStory from "@/sections/OurStory";
 import { VideoIcon } from "lucide-react";
 import Image from "next/image";
@@ -134,11 +135,13 @@ export default function Page() {
 
             <OurImpact />
 
+            <GetInvolved />
+
             <Pricing />
 
             <FaqSection />
 
-            <div className="flex flex-col items-center text-center justify-center mt-20">
+            <div id="get-started" className="flex flex-col items-center text-center justify-center mt-20">
                 <h3 className="text-3xl font-semibold mt-16 mb-4">Ready to Get Started?</h3>
                 <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
                     Join thousands of satisfied customers and transform your business today.
