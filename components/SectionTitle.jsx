@@ -1,9 +1,40 @@
-export default function SectionTitle({ text1, text2, text3 }) {
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+export default function SectionTitle({ label, title, highlight, description, alignment = "center", headingId, className = "" }) {
+    const headerRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const isCentered = alignment === "center";
+
+    useEffect(() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setIsVisible(true);
+            return;
+        }
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.disconnect();
+            }
+        }, { threshold: 0.12 });
+
+        if (headerRef.current) observer.observe(headerRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <>
-            <p className="text-center font-medium text-[#267A47] dark:text-[#75D59A] mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">{text1}</p>
-            <h3 className="text-3xl font-semibold text-center mx-auto mt-4">{text2}</h3>
-            <p className="text-slate-600 dark:text-slate-300 text-center mt-2 max-w-lg mx-auto">{text3}</p>
-        </>
+        <header ref={headerRef} className={`section-header ${isCentered ? "section-header--centered" : ""} ${isVisible ? "section-header--visible" : ""} ${className}`.trim()}>
+            <div className="section-header-label">
+                {isCentered && <span className="section-header-line" aria-hidden="true" />}
+                <p>{label}</p>
+                <span className="section-header-line" aria-hidden="true" />
+            </div>
+            <h2 id={headingId} className="section-header-title">
+                {title} <span>{highlight}</span>
+            </h2>
+            {description && <div className="section-header-description">{description}</div>}
+        </header>
     );
 }

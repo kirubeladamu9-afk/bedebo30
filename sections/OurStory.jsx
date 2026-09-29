@@ -1,9 +1,10 @@
 import Image from "next/image";
+import SectionTitle from "@/components/SectionTitle";
 import { Lightbulb, ShieldCheck, Star } from "lucide-react";
 
 export default function OurStory() {
     return (
-        <section id="our-story" aria-labelledby="our-story-title" className="scroll-mt-20 px-6 pt-24 pb-12 md:px-10 md:pt-32 md:pb-8 lg:px-16">
+        <section id="about" aria-labelledby="our-story-title" className="scroll-mt-20 px-6 pt-24 pb-12 md:px-10 md:pt-32 md:pb-8 lg:px-16">
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 md:grid-cols-2 lg:gap-20">
                 <div className="relative mx-auto aspect-square w-full max-w-[420px]">
                     <div className="absolute bottom-0 left-0 z-0 h-[36%] w-[44%] opacity-60" style={{ backgroundImage: "radial-gradient(#3DB268 1.5px, transparent 1.5px)", backgroundSize: "16px 16px" }} />
@@ -13,18 +14,20 @@ export default function OurStory() {
                 </div>
 
                 <div className="max-w-xl">
-                    <div className="mb-5 flex items-center gap-3">
-                        <span className="h-px w-9 bg-[#3DB268]" />
-                        <p className="text-xs font-semibold tracking-[0.28em] text-[#267A47] dark:text-[#75D59A]">ABOUT US</p>
-                    </div>
-                    <h2 id="our-story-title" className="scroll-mt-28 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                        Let&apos;s Talk About{" "}
-                        <span className="bg-gradient-to-r from-[#267A47] to-[#3DB268] bg-clip-text text-transparent">Company</span>
-                    </h2>
-                    <div className="mt-6 space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-                        <p>We bring curious minds and thoughtful design together to help teams do their best work.</p>
-                        <p>From the first spark to a product people love, we partner with ambitious founders to make good ideas real.</p>
-                    </div>
+                    <SectionTitle
+                        label="ABOUT US"
+                        title="Let's Talk About"
+                        highlight="Company"
+                        alignment="left"
+                        className="section-header--flush"
+                        headingId="our-story-title"
+                        description={(
+                            <div className="space-y-4 text-base leading-7">
+                                <p>We bring curious minds and thoughtful design together to help teams do their best work.</p>
+                                <p>From the first spark to a product people love, we partner with ambitious founders to make good ideas real.</p>
+                            </div>
+                        )}
+                    />
                     <div className="mt-7 flex items-center gap-4">
                         <span className="text-2xl font-semibold text-slate-900 dark:text-white">A+</span>
                         <span className="h-8 w-px bg-slate-200 dark:bg-slate-700" />

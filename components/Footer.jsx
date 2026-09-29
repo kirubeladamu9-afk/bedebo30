@@ -1,6 +1,6 @@
 "use client"
 import { useThemeContext } from "@/context/ThemeContext";
-import { navLinks } from "@/data/navLinks";
+import { footerLinks } from "@/data/navLinks";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ export default function Footer() {
                     <div>
                         <h2 className="font-semibold mb-5">Company</h2>
                         <ul className="space-y-2">
-                            {navLinks.map((link, index) => (
+                            {footerLinks.map((link, index) => (
                                 <li key={index}>
                                     <Link href={link.href} className="hover:text-[#267A47] dark:hover:text-[#75D59A] transition">{link.name}</Link>
                                 </li>

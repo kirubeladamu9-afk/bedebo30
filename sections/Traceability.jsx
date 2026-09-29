@@ -238,8 +238,8 @@ export default function Traceability() {
     }, [reducedMotion]);
 
     return (
-        <section id="traceability" className="scroll-mt-24 px-6 pb-20 md:px-10 lg:px-16">
-            <SectionTitle text1="TRACEABILITY" text2="Traceability & Value Chain Breakdown" text3="From farm to vendor, every crate is tracked, verified, and traceable." />
+        <section id="traceability" aria-labelledby="traceability-title" className="scroll-mt-24 px-6 pb-20 md:px-10 lg:px-16">
+            <SectionTitle label="TRACEABILITY" title="Traceability & Value" highlight="Chain" description="From farm to vendor, every crate is tracked, verified, and traceable." headingId="traceability-title" />
             <div ref={timelineRef} className="relative mx-auto mt-14 max-w-6xl">
                 <div ref={mobilePathRef} aria-hidden="true" className="absolute left-[23px] z-0 w-[3px] rounded-full md:hidden" />
                 <div ref={mobilePackageRef} aria-hidden="true" className="absolute left-[1px] z-10 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full bg-[#3DB268] text-white shadow-[0_0_18px_rgba(61,178,104,0.75)] md:hidden">

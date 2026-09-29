@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import { ArrowUpRight, Leaf, UsersRound } from "lucide-react";
 
@@ -31,9 +32,15 @@ export default function OurImpact() {
         <section id="impact" ref={sectionRef} aria-labelledby="impact-title" className="scroll-mt-24 px-6 py-24 md:px-10 md:py-32 lg:px-16">
             <div className={`mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none motion-reduce:opacity-100 md:grid-cols-2 lg:gap-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
                 <div className="order-2 md:order-1">
-                    <h2 id="impact-title" className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Our Impact</h2>
-                    <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">The positive change we drive</p>
-                    <span className="mt-5 block h-1 w-14 rounded-full bg-[#3DB268]" />
+                    <SectionTitle
+                        label="OUR IMPACT"
+                        title="Our"
+                        highlight="Impact"
+                        description="The positive change we drive"
+                        alignment="left"
+                        className="section-header--flush"
+                        headingId="impact-title"
+                    />
 
                     <div className="mt-9 grid gap-6 sm:grid-cols-2">
                         <div className="flex gap-4">

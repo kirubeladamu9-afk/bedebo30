@@ -57,7 +57,7 @@ export default function Page() {
             <OurStory />
 
             <section id="solutions" className="scroll-mt-24">
-                <SectionTitle text1="OUR SOLUTIONS" text2="Our Solutions" text3="Tailored solutions designed to help your business grow." />
+                <SectionTitle label="OUR SOLUTIONS" title="Our" highlight="Solutions" description="Tailored solutions designed to help your business grow." headingId="solutions-title" />
 
                 <div className="mt-10 grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:gap-4 md:px-16 lg:grid-cols-4 lg:px-24 xl:px-32">
                     {featuresData.map((feature, index) => (
@@ -80,11 +80,15 @@ export default function Page() {
 
             <FaqSection />
 
-            <div id="get-started" className="flex flex-col items-center text-center justify-center mt-20">
-                <h3 className="text-3xl font-semibold mt-16 mb-4">Ready to Get Started?</h3>
-                <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
-                    Join thousands of satisfied customers and transform your business today.
-                </p>
+            <section id="contact" aria-labelledby="contact-title" className="scroll-mt-24 flex flex-col items-center text-center justify-center mt-20">
+                <SectionTitle
+                    label="GET IN TOUCH"
+                    title="Ready to Get"
+                    highlight="Started?"
+                    description="Join thousands of satisfied customers and transform your business today."
+                    headingId="contact-title"
+                    className="section-header--cta"
+                />
                 <div className="flex items-center gap-4 mt-8">
                     <button className="bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md px-6 h-11">
                         Start free trial
@@ -93,7 +97,7 @@ export default function Page() {
                         Contact sales
                     </button>
                 </div>
-            </div>
+            </section>
 
         </>
     );
