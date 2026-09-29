@@ -21,15 +21,18 @@ export default function Page() {
                     <div className="grid min-h-0 grid-cols-1 items-center gap-12 pt-28 md:min-h-[calc(100svh-4rem)] pb-16 md:grid-cols-2 md:gap-10 md:pt-24 md:pb-14 lg:gap-16">
                         <div className="flex flex-col items-start">
                             <h1 className="max-w-xl text-4xl leading-[1.12] font-semibold sm:text-5xl md:max-w-2xl md:text-[48px] lg:text-[52px]">
-                                Empowering Ethiopian{" "}
-                                <span className="bg-gradient-to-r from-[#267A47] dark:from-[#75D59A] to-[#2B844B] dark:to-[#B5E8C6] bg-clip-text text-transparent">Agriculture Through Innovation</span>
+                                Empowering Ethiopian Agriculture Through{" "}
+                                <span className="bg-gradient-to-r from-[#267A47] dark:from-[#75D59A] to-[#2B844B] dark:to-[#B5E8C6] bg-clip-text text-transparent">Innovation</span>
                             </h1>
                             <p className="mt-5 max-w-lg text-lg font-medium dark:text-slate-200">
-                                Empowering Ethiopian Agriculture Through Innovation
+                                Integrating digital solutions and sustainable energy for a thriving future
                             </p>
                             <p className="mt-4 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300">
                                 At Bedebo, we are revolutionizing the agricultural value chain in Ethiopia. Through digital platforms and eco-friendly energy solutions, we are enhancing livelihoods, reducing post-harvest losses, and empowering small-scale farmers and women. Join us on our journey towards a sustainable agricultural future
                             </p>
+                            <button type="button" className="mt-6 rounded-md bg-[#267A47] px-6 py-3 font-medium text-white transition hover:bg-[#1E663A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#267A47]">
+                                Download Bedebo Apps
+                            </button>
                         </div>
                         <div aria-hidden="true" className="relative mx-auto w-full max-w-xl rounded-[30px] border border-[#3DB268]/25 bg-[#3DB268]/[0.07] p-3 shadow-[0_28px_90px_rgba(61,178,104,0.16)] sm:p-5">
                             <div className="absolute -right-8 -top-10 size-40 rounded-full bg-[#3DB268]/20 blur-3xl" />
