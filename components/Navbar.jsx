@@ -3,12 +3,14 @@ import { navLinks } from "@/data/navLinks";
 import { MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { useThemeContext } from "@/context/ThemeContext";
 
 export default function Navbar() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
+    const pathname = usePathname();
     const { theme } = useThemeContext();
 
     useEffect(() => {
@@ -25,19 +27,17 @@ export default function Navbar() {
                 <Image className="h-9 md:h-9.5 w-auto shrink-0" src={theme === "dark" ? "/assets/logo-light.svg" : "/assets/logo-dark.svg"} alt="Logo" width={140} height={40} priority fetchPriority="high" />
             </a>
             <div className="hidden items-center gap-5 xl:flex xl:gap-7 xl:pl-12">
-                {navLinks.map((link) => (
-                    <Link key={link.name} href={link.href} className="hover:text-slate-600 dark:hover:text-slate-300">
-                        {link.name}
-                    </Link>
-                ))}
+                {navLinks.map((link) => {
+                    const isBlogActive = link.name === "Blog" && pathname.startsWith("/blog/");
+                    return <Link key={link.name} href={link.href} aria-current={isBlogActive ? "page" : undefined} className={`rounded-sm transition-colors hover:text-slate-600 dark:hover:text-slate-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] ${isBlogActive ? "font-semibold text-[#267A47] dark:text-[#75D59A]" : ""}`}>{link.name}</Link>;
+                })}
             </div>
             {/* Mobile menu */}
             <div className={`fixed inset-0 flex flex-col items-center justify-center gap-6 text-lg font-medium bg-white/60 dark:bg-black/40 backdrop-blur-md xl:hidden transition duration-300 ${openMobileMenu ? "translate-x-0" : "-translate-x-full"}`}>
-                {navLinks.map((link) => (
-                    <Link key={link.name} href={link.href}>
-                        {link.name}
-                    </Link>
-                ))}
+                {navLinks.map((link) => {
+                    const isBlogActive = link.name === "Blog" && pathname.startsWith("/blog/");
+                    return <Link key={link.name} href={link.href} aria-current={isBlogActive ? "page" : undefined} className={`rounded-sm transition-colors hover:text-[#267A47] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] dark:hover:text-[#75D59A] ${isBlogActive ? "font-semibold text-[#267A47] dark:text-[#75D59A]" : ""}`} onClick={() => setOpenMobileMenu(false)}>{link.name}</Link>;
+                })}
                 <button>
                     Sign in
                 </button>

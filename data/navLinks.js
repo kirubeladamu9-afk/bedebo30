@@ -21,7 +21,7 @@ export const navLinks = [
     },
     {
         name: "Blog",
-        href: "#blog",
+        href: "/#blog",
     },
     {
         name: "Docs",
