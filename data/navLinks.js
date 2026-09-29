@@ -20,10 +20,6 @@ export const navLinks = [
         href: "#traceability",
     },
     {
-        name: "Pricing",
-        href: "#pricing",
-    },
-    {
         name: "Docs",
         href: "#docs",
     }

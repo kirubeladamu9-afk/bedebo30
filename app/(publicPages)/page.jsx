@@ -4,7 +4,6 @@ import { useThemeContext } from "@/context/ThemeContext";
 import { companiesLogo } from "@/data/companiesLogo";
 import { featuresData } from "@/data/featuresData";
 import { FaqSection } from "@/sections/FaqSection";
-import Pricing from "@/sections/Pricing";
 import OurImpact from "@/sections/OurImpact";
 import GetInvolved from "@/sections/GetInvolved";
 import Traceability from "@/sections/Traceability";
@@ -139,8 +138,6 @@ export default function Page() {
             <GetInvolved />
 
             <Traceability />
-
-            <Pricing />
 
             <FaqSection />
 
