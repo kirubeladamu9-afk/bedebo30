@@ -22,9 +22,9 @@ export default function Navbar() {
     }, [openMobileMenu]);
 
     return (
-        <nav className={`flex items-center justify-between fixed z-50 top-0 w-full px-6 md:px-16 lg:px-24 xl:px-32 py-4 ${openMobileMenu ? '' : 'backdrop-blur'}`}>
+        <nav className={`flex items-center justify-between fixed z-50 top-0 w-full px-6 md:px-16 lg:px-24 xl:px-32 py-4 ${openMobileMenu ? '' : 'backdrop-blur'} ${pathname === "/" ? "text-[#1E2841]" : ""}`}>
             <a href="https://prebuiltui.com?utm_source=landing">
-                <Image className="h-9 md:h-9.5 w-auto shrink-0" src={theme === "dark" ? "/assets/logo-light.svg" : "/assets/logo-dark.svg"} alt="Logo" width={140} height={40} priority fetchPriority="high" />
+                <Image className="h-9 md:h-9.5 w-auto shrink-0" src={pathname === "/" ? "/assets/logo-dark.svg" : theme === "dark" ? "/assets/logo-light.svg" : "/assets/logo-dark.svg"} alt="Logo" width={140} height={40} priority fetchPriority="high" />
             </a>
             <div className="hidden items-center gap-5 xl:flex xl:gap-7 xl:pl-12">
                 {navLinks.map((link) => {
