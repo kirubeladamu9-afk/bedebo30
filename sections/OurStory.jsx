@@ -8,7 +8,7 @@ export default function OurStory() {
                 <div className="relative mx-auto aspect-square w-full max-w-[420px]">
                     <div className="absolute bottom-0 left-0 z-0 h-[36%] w-[44%] opacity-60" style={{ backgroundImage: "radial-gradient(#3DB268 1.5px, transparent 1.5px)", backgroundSize: "16px 16px" }} />
                     <div className="absolute inset-0 z-10 overflow-hidden rounded-full border-[3px] border-white shadow-[0_24px_60px_rgba(15,23,42,0.16)] dark:border-slate-950">
-                        <Image fill sizes="(max-width: 768px) 100vw, 420px" className="object-cover" src="https://images.pexels.com/photos/5257575/pexels-photo-5257575.jpeg" alt="Founders collaborating around a table" />
+                        <Image fill sizes="(max-width: 768px) 100vw, 420px" className="object-cover" src="/assets/about-image.webp" alt="Combine harvester working in a sunlit field" />
                     </div>
                 </div>
 
