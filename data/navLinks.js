@@ -16,6 +16,10 @@ export const navLinks = [
         href: "#get-involved",
     },
     {
+        name: "Traceability",
+        href: "#traceability",
+    },
+    {
         name: "Pricing",
         href: "#pricing",
     },

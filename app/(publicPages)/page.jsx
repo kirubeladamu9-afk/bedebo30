@@ -7,6 +7,7 @@ import { FaqSection } from "@/sections/FaqSection";
 import Pricing from "@/sections/Pricing";
 import OurImpact from "@/sections/OurImpact";
 import GetInvolved from "@/sections/GetInvolved";
+import Traceability from "@/sections/Traceability";
 import OurStory from "@/sections/OurStory";
 import { VideoIcon } from "lucide-react";
 import Image from "next/image";
@@ -136,6 +137,8 @@ export default function Page() {
             <OurImpact />
 
             <GetInvolved />
+
+            <Traceability />
 
             <Pricing />
 
