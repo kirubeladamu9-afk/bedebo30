@@ -30,8 +30,8 @@ export default function OurImpact() {
 
     return (
         <section id="impact" ref={sectionRef} aria-labelledby="impact-title" className="scroll-mt-24 px-6 py-24 md:px-10 md:py-32 lg:px-16">
-            <div className={`mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none motion-reduce:opacity-100 md:grid-cols-2 lg:gap-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
-                <div className="order-2 md:order-1">
+            <div className={`mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none motion-reduce:opacity-100 lg:gap-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
+                <div>
                     <SectionTitle
                         label="OUR IMPACT"
                         title="Our"
@@ -73,7 +73,7 @@ export default function OurImpact() {
                     </dl>
                 </div>
 
-                <div className="relative order-1 mx-auto w-full max-w-[560px] md:order-2">
+                <div className="relative mx-auto w-full max-w-[560px]">
                     <div className="absolute -inset-3 rounded-[42%_20%_20%_20%] border border-[#3DB268]/20 bg-[#3DB268]/[0.06]" />
                     <div className="relative aspect-[1.08/1] overflow-hidden rounded-[42%_20%_20%_20%] shadow-[0_28px_70px_rgba(15,23,42,0.18)]">
                         <Image fill priority={false} sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" src="https://images.pexels.com/photos/2382904/pexels-photo-2382904.jpeg" alt="Farmers harvesting crops in a lush green field" />
