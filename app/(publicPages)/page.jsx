@@ -20,16 +20,16 @@ export default function Page() {
             <section
                 className="bedebo-hero"
                 aria-labelledby="hero-heading"
-                style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F1284462c73094a1f9485fd79b4e21dca%2F2f20b077d2c64a60890b8e3a444ac5ce?format=webp&width=800&height=1200')" }}
+                style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F1284462c73094a1f9485fd79b4e21dca%2F2f20b077d2c64a60890b8e3a444ac5ce?format=webp&width=1920&height=810')" }}
             >
-                <div className="bedebo-hero-content">
+                <div className="bedebo-hero-content bedebo-site-container">
                     <h1 id="hero-heading" className="bedebo-hero-heading">
                         Empowering Ethiopian<br className="bedebo-desktop-break" />{" "}
                         Agriculture Through<br className="bedebo-desktop-break" />{" "}
                         <span>Innovation</span>
                     </h1>
                     <p className="bedebo-hero-subheadline">
-                        Integrating digital solutions and sustainable energy for<br className="bedebo-desktop-break" />{" "}a thriving future
+                        Integrating digital solutions and sustainable energy for a thriving future
                     </p>
                     <p className="bedebo-hero-copy">
                         At Bedebo, we are revolutionizing the agricultural value chain in Ethiopia. Through digital platforms and eco-friendly energy solutions, we are enhancing livelihoods, reducing post-harvest losses, and empowering small-scale farmers and women. Join us on our journey towards a sustainable agricultural future.
