@@ -5,14 +5,10 @@ export default function OurStory() {
     return (
         <section id="our-story" aria-labelledby="our-story-title" className="scroll-mt-20 px-6 pt-24 pb-12 md:px-10 md:pt-32 md:pb-8 lg:px-16">
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 md:grid-cols-2 lg:gap-20">
-                <div aria-hidden="true" className="relative mx-auto h-[390px] w-full max-w-[480px] sm:h-[450px]">
-                    <div className="absolute bottom-0 left-0 z-0 h-36 w-44 opacity-60" style={{ backgroundImage: "radial-gradient(#3DB268 1.5px, transparent 1.5px)", backgroundSize: "16px 16px" }} />
-                    <div className="absolute left-0 top-[21%] z-10 size-[230px] overflow-hidden rounded-full border-[8px] border-white shadow-[0_24px_60px_rgba(15,23,42,0.16)] dark:border-slate-950 sm:size-[270px]">
-                        <Image fill sizes="(max-width: 640px) 230px, 270px" className="object-cover" src="https://images.pexels.com/photos/5257575/pexels-photo-5257575.jpeg" alt="Founders collaborating around a table" />
-                    </div>
-                    <div className="absolute right-[3%] top-0 z-20 h-[87%] w-[56%] overflow-hidden rounded-[48%] shadow-[0_24px_60px_rgba(15,23,42,0.2)]">
-                        <Image fill sizes="(max-width: 640px) 190px, 270px" className="object-cover" src="https://images.pexels.com/photos/34880247/pexels-photo-34880247.jpeg" alt="Portrait of a creative professional" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#267A47]/90 via-[#3DB268]/35 to-transparent" />
+                <div className="relative mx-auto aspect-square w-full max-w-[420px]">
+                    <div className="absolute bottom-0 left-0 z-0 h-[36%] w-[44%] opacity-60" style={{ backgroundImage: "radial-gradient(#3DB268 1.5px, transparent 1.5px)", backgroundSize: "16px 16px" }} />
+                    <div className="absolute inset-0 z-10 overflow-hidden rounded-full border-[3px] border-white shadow-[0_24px_60px_rgba(15,23,42,0.16)] dark:border-slate-950">
+                        <Image fill sizes="(max-width: 768px) 100vw, 420px" className="object-cover" src="https://images.pexels.com/photos/5257575/pexels-photo-5257575.jpeg" alt="Founders collaborating around a table" />
                     </div>
                 </div>
 
