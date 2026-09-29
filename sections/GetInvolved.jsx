@@ -1,5 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
-import { ArrowRight, Handshake, Network, Sprout } from "lucide-react";
+import { Handshake, Network, Sprout } from "lucide-react";
 
 const involvementOptions = [
     {
@@ -29,10 +29,6 @@ export default function GetInvolved() {
                         <Icon className="mb-5 size-8 shrink-0 text-[#3DB268]" strokeWidth={1.5} />
                         <h3 className="min-h-[3.6em] text-center text-[15px] font-semibold leading-[1.2]">{title}</h3>
                         <p className="mt-3 text-center text-[0.95rem] leading-[1.6] text-slate-500 dark:text-slate-400">{description}</p>
-                        <a href="#contact" className="mt-auto inline-flex items-center justify-center gap-2 pt-5 text-sm font-semibold text-[#267A47] transition-colors hover:text-[#1E663A] dark:text-[#75D59A] dark:hover:text-[#B5E8C6]">
-                            Learn more
-                            <ArrowRight size={16} />
-                        </a>
                     </article>
                 ))}
             </div>

@@ -5,11 +5,6 @@ import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import { ArrowUpRight, Leaf, UsersRound } from "lucide-react";
 
-const impactStats = [
-    { value: "35%", label: "Higher yields" },
-    { value: "50%", label: "Less waste" },
-];
-
 export default function OurImpact() {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -62,20 +57,12 @@ export default function OurImpact() {
                         </div>
                     </div>
 
-                    <dl className="mt-10 grid grid-cols-2 gap-3 border-t border-slate-200 pt-6 dark:border-slate-800 sm:gap-5">
-                        {impactStats.map((stat) => (
-                            <div key={stat.label}>
-                                <dd className="text-2xl font-semibold tracking-tight text-[#267A47] dark:text-[#75D59A] sm:text-3xl">{stat.value}</dd>
-                                <dt className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400 sm:text-sm">{stat.label}</dt>
-                            </div>
-                        ))}
-                    </dl>
                 </div>
 
                 <div className="relative mx-auto w-full max-w-[560px]">
                     <div className="absolute -inset-3 rounded-[42%_20%_20%_20%] border border-[#3DB268]/20 bg-[#3DB268]/[0.06]" />
                     <div className="relative aspect-[1.08/1] overflow-hidden rounded-[42%_20%_20%_20%] shadow-[0_28px_70px_rgba(15,23,42,0.18)]">
-                        <Image fill priority={false} sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" src="https://images.pexels.com/photos/2382904/pexels-photo-2382904.jpeg" alt="Farmers harvesting crops in a lush green field" />
+                        <Image fill priority={false} sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" src="https://cdn.builder.io/api/v1/image/assets%2F1284462c73094a1f9485fd79b4e21dca%2Fca4e4b7ee05a48e3bb47474595380a38?format=webp&width=800&height=1200" alt="Rows of green grapevines in a vineyard" />
                         <div className="absolute inset-0 bg-gradient-to-br from-[#3DB268]/10 via-transparent to-[#267A47]/20" />
                     </div>
                     <div className="absolute -left-2 top-1/2 flex -translate-y-1/2 items-center gap-3 rounded-2xl border border-white/60 bg-white/75 px-4 py-3 shadow-lg shadow-slate-950/10 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/70 sm:-left-8 sm:px-5">
