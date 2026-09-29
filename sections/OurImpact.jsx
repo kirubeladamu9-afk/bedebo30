@@ -49,7 +49,7 @@ export default function OurImpact() {
                             </span>
                             <div>
                                 <h3 className="font-semibold">Empowering Communities</h3>
-                                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">We partner with local growers to expand access to practical tools, fair opportunities, and resilient livelihoods.</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Through our innovative solutions, we are enabling farmers to access new markets, improve their yields, reduce post-harvest losses, and increase their incomes. Our emphasis on women’s inclusion is advancing gender equality within the agricultural sector.</p>
                             </div>
                         </div>
                         <div className="flex gap-4">
@@ -58,7 +58,7 @@ export default function OurImpact() {
                             </span>
                             <div>
                                 <h3 className="font-semibold">Sustainability</h3>
-                                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Smarter resource use helps reduce waste, protect soil, and support healthier harvests.</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Our commitment to environmental sustainability is woven into every aspect of our work, from employing solar-powered cold storage and irrigation systems to contributing to carbon credit projects. We are not merely transforming agriculture; we are ensuring a healthier planet.</p>
                             </div>
                         </div>
                     </div>
