@@ -5,6 +5,7 @@ import { companiesLogo } from "@/data/companiesLogo";
 import { featuresData } from "@/data/featuresData";
 import { FaqSection } from "@/sections/FaqSection";
 import Pricing from "@/sections/Pricing";
+import OurStory from "@/sections/OurStory";
 import { VideoIcon } from "lucide-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -113,6 +114,8 @@ export default function Page() {
                     </Marquee>
                 </div>
             </section>
+
+            <OurStory />
 
             <SectionTitle text1="FEATURES" text2="Built for builders" text3="Components, patterns and pages — everything you need to ship." />
 
