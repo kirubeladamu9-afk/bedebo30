@@ -104,7 +104,7 @@ export default function Footer() {
 
                 <div className="mt-16 border-t border-white/25 pt-5 text-center text-xs text-white/85">
                     Copyright © {new Date().getFullYear()}, Powered by{" "}
-                    <a href="#contact" className="text-[#3DB268] underline-offset-4 transition hover:underline">VP Solutions</a>
+                    <a href="#contact" className="text-[#3DB268] underline-offset-4 transition hover:underline">Bedebo Ethiopia</a>
                 </div>
             </div>
         </footer>
