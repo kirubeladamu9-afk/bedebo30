@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ArrowUpRight, Leaf, UsersRound } from "lucide-react";
 
 const impactStats = [
-    { value: "10K+", label: "Farmers reached" },
     { value: "35%", label: "Higher yields" },
     { value: "50%", label: "Less waste" },
 ];
@@ -30,7 +29,7 @@ export default function OurImpact() {
 
     return (
         <section id="impact" ref={sectionRef} aria-labelledby="impact-title" className="scroll-mt-24 px-6 py-24 md:px-10 md:py-32 lg:px-16">
-            <div className={`mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none motion-reduce:opacity-100 lg:gap-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
+            <div className={`mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none motion-reduce:opacity-100 md:grid-cols-2 lg:gap-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
                 <div>
                     <SectionTitle
                         label="OUR IMPACT"
@@ -42,7 +41,7 @@ export default function OurImpact() {
                         headingId="impact-title"
                     />
 
-                    <div className="mt-9 grid gap-6 sm:grid-cols-2">
+                    <div className="mt-9 grid gap-6">
                         <div className="flex gap-4">
                             <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#3DB268]/10 text-[#267A47] dark:text-[#75D59A]">
                                 <UsersRound size={20} strokeWidth={1.8} />
@@ -63,7 +62,7 @@ export default function OurImpact() {
                         </div>
                     </div>
 
-                    <dl className="mt-10 grid grid-cols-3 gap-3 border-t border-slate-200 pt-6 dark:border-slate-800 sm:gap-5">
+                    <dl className="mt-10 grid grid-cols-2 gap-3 border-t border-slate-200 pt-6 dark:border-slate-800 sm:gap-5">
                         {impactStats.map((stat) => (
                             <div key={stat.label}>
                                 <dd className="text-2xl font-semibold tracking-tight text-[#267A47] dark:text-[#75D59A] sm:text-3xl">{stat.value}</dd>
