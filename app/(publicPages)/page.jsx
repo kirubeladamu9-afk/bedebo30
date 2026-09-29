@@ -30,16 +30,16 @@ export default function Page() {
                 </div>
                 <h1 className="mt-2 text-5xl/15 md:text-[64px]/19 font-semibold max-w-2xl">
                     Every startup begins with{" "}
-                    <span className="bg-gradient-to-r from-[#923FEF] dark:from-[#C99DFF] to-[#C35DE8] dark:to-[#E1C9FF] bg-clip-text text-transparent">spark</span>
+                    <span className="bg-gradient-to-r from-[#267A47] dark:from-[#75D59A] to-[#2B844B] dark:to-[#B5E8C6] bg-clip-text text-transparent">spark</span>
                 </h1>
                 <p className="text-base dark:text-slate-300 max-w-lg mt-2">
                     Our latest thoughts, trends, and tools, written to help you learn, build, and grow faster.
                 </p>
                 <div className="flex items-center gap-4 mt-8">
-                    <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+                    <button className="bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md px-6 h-11">
                         Get started
                     </button>
-                    <button className="flex items-center gap-2 border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+                    <button className="flex items-center gap-2 border border-[#267A47] transition text-slate-600 dark:text-white rounded-md px-6 h-11">
                         <VideoIcon strokeWidth={1} />
                         <span>Watch demo</span>
                     </button>
@@ -61,7 +61,7 @@ export default function Page() {
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-32">
                 {featuresData.map((feature, index) => (
                     <div key={index} className="p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-66">
-                        <feature.icon className="text-purple-500 size-8 mt-4" strokeWidth={1.3} />
+                        <feature.icon className="text-[#2F8D54] size-8 mt-4" strokeWidth={1.3} />
                         <h3 className="text-base font-medium">{feature.title}</h3>
                         <p className="text-slate-400 line-clamp-2">{feature.description}</p>
                     </div>
@@ -78,10 +78,10 @@ export default function Page() {
                     Join thousands of satisfied customers and transform your business today.
                 </p>
                 <div className="flex items-center gap-4 mt-8">
-                    <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+                    <button className="bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md px-6 h-11">
                         Start free trial
                     </button>
-                    <button className="border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+                    <button className="border border-[#267A47] transition text-slate-600 dark:text-white rounded-md px-6 h-11">
                         Contact sales
                     </button>
                 </div>

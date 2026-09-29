@@ -41,16 +41,16 @@ export default function Navbar() {
                 <button>
                     Sign in
                 </button>
-                <button className="aspect-square size-10 p-1 items-center justify-center bg-purple-600 hover:bg-purple-700 transition text-white rounded-md flex" onClick={() => setOpenMobileMenu(false)}>
+                <button className="aspect-square size-10 p-1 items-center justify-center bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md flex" onClick={() => setOpenMobileMenu(false)}>
                     <XIcon />
                 </button>
             </div>
             <div className="flex items-center gap-4">
                 <ThemeToggle />
-                <button className="hidden md:block hover:bg-slate-100 dark:hover:bg-purple-950 transition px-4 py-2 border border-purple-600 rounded-md">
+                <button className="hidden md:block hover:bg-slate-100 dark:hover:bg-[#123822] transition px-4 py-2 border border-[#267A47] rounded-md">
                     Sign in
                 </button>
-                <button className="hidden md:block px-4 py-2 bg-purple-600 hover:bg-purple-700 transition text-white rounded-md">
+                <button className="hidden md:block px-4 py-2 bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md">
                     Get started
                 </button>
                 <button onClick={() => setOpenMobileMenu(!openMobileMenu)} className="md:hidden">
