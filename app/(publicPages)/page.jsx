@@ -3,7 +3,6 @@ import SectionTitle from "@/components/SectionTitle";
 import { useThemeContext } from "@/context/ThemeContext";
 import { companiesLogo } from "@/data/companiesLogo";
 import { featuresData } from "@/data/featuresData";
-import { FaqSection } from "@/sections/FaqSection";
 import OurImpact from "@/sections/OurImpact";
 import GetInvolved from "@/sections/GetInvolved";
 import Traceability from "@/sections/Traceability";
@@ -78,26 +77,6 @@ export default function Page() {
 
             <OurBlogs />
 
-            <FaqSection />
-
-            <section id="contact" aria-labelledby="contact-title" className="scroll-mt-24 flex flex-col items-center text-center justify-center mt-20">
-                <SectionTitle
-                    label="GET IN TOUCH"
-                    title="Ready to Get"
-                    highlight="Started?"
-                    description="Join thousands of satisfied customers and transform your business today."
-                    headingId="contact-title"
-                    className="section-header--cta"
-                />
-                <div className="flex items-center gap-4 mt-8">
-                    <button className="bg-[#267A47] hover:bg-[#1E663A] transition text-white rounded-md px-6 h-11">
-                        Start free trial
-                    </button>
-                    <button className="border border-[#267A47] transition text-slate-600 dark:text-white rounded-md px-6 h-11">
-                        Contact sales
-                    </button>
-                </div>
-            </section>
 
         </>
     );
