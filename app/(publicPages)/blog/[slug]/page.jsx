@@ -9,21 +9,29 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     const post = blogPosts.find((article) => article.slug === slug);
-    if (!post) return { title: "Article not found | Bedebo", description: "Browse the latest stories from Bedebo." };
+    if (!post) {
+        const title = "Bedebo Ethiopia - Page Not Found";
+        return {
+            title: "Page Not Found",
+            openGraph: { title },
+            twitter: { title },
+        };
+    }
 
+    const title = `Bedebo Ethiopia - ${post.title}`;
     return {
-        title: `${post.title} | Bedebo`,
+        title,
         description: post.excerpt,
         alternates: { canonical: `/blog/${post.slug}` },
         openGraph: {
             type: "article",
-            title: post.title,
+            title,
             description: post.excerpt,
             publishedTime: new Date(`${post.date}T12:00:00Z`).toISOString(),
             authors: [post.author.name],
             images: [{ url: post.coverImage, alt: post.coverImageAlt }],
         },
-        twitter: { card: "summary_large_image", title: post.title, description: post.excerpt, images: [post.coverImage] },
+        twitter: { card: "summary_large_image", title, description: post.excerpt, images: [post.coverImage] },
     };
 }
 

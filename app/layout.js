@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-    title: "Landing - PrebuiltUI",
+    title: "Bedebo Ethiopia",
     description: "Landing is a SaaS template for developers to build SaaS applications.",
 };
 
