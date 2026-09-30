@@ -11,8 +11,16 @@ import { useThemeContext } from "@/context/ThemeContext";
 export default function Navbar() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
+    const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
     const { theme } = useThemeContext();
+
+    useEffect(() => {
+        const updateScrolledState = () => setIsScrolled(window.scrollY > 20);
+        updateScrolledState();
+        window.addEventListener("scroll", updateScrolledState, { passive: true });
+        return () => window.removeEventListener("scroll", updateScrolledState);
+    }, []);
 
     useEffect(() => {
         if (openMobileMenu) {
@@ -64,7 +72,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={`bedebo-navbar bedebo-site-container fixed inset-x-0 top-0 z-50 flex items-center justify-between py-5 ${openMobileMenu ? "" : "backdrop-blur"} ${pathname === "/" ? "text-[#1E2841]" : ""}`}>
+        <nav className={`bedebo-navbar bedebo-site-container fixed inset-x-0 top-0 z-50 flex items-center justify-between ${isScrolled ? "bedebo-navbar--scrolled" : ""} ${openMobileMenu ? "" : "backdrop-blur"} ${pathname === "/" ? "text-[#1E2841]" : ""}`}>
             <a href="https://prebuiltui.com?utm_source=landing">
                 <Image className="bedebo-navbar-logo h-16 w-auto shrink-0 md:h-17" src="/assets/bedebo-ethiopia.webp" alt="Bedebo Ethiopia" width={140} height={140} priority fetchPriority="high" />
             </a>
