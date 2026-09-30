@@ -74,7 +74,6 @@ const traceabilitySteps = [
 ];
 
 function TraceabilityStep({ step, index, active, currentStep, registerBadge }) {
-    const [showPreview, setShowPreview] = useState(false);
     const Icon = step.icon;
     const isLeft = index % 2 === 0;
     const badgeRef = useCallback((node) => registerBadge(index, node), [index, registerBadge]);
@@ -96,11 +95,11 @@ function TraceabilityStep({ step, index, active, currentStep, registerBadge }) {
                         </li>
                     ))}
                 </ul>
-                <button type="button" aria-expanded={showPreview} onClick={() => setShowPreview((visible) => !visible)} className="relative z-30 mt-auto inline-flex min-h-8 items-center gap-2 self-start pt-3 text-xs font-semibold text-[#267A47] transition-colors hover:text-[#1E663A] dark:text-[#75D59A] dark:hover:text-[#B5E8C6]">
+                <span className="relative z-30 mt-auto hidden min-h-8 items-center gap-2 self-start pt-3 text-xs font-semibold text-[#267A47] md:inline-flex dark:text-[#75D59A]">
                     <ImageIcon size={15} />
-                    {showPreview ? "Hide preview" : "View sample"}
-                </button>
-                <div className={`pointer-events-none absolute inset-0 z-20 hidden overflow-hidden rounded-2xl transition-opacity duration-300 md:block ${showPreview ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"}`}>
+                    View sample
+                </span>
+                <div className="pointer-events-none absolute inset-0 z-20 hidden overflow-hidden rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:block">
                     <Image fill loading="lazy" sizes="(max-width: 1280px) 40vw, 32vw" className="object-cover" src={step.preview} alt={step.previewAlt} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#14532d]/90 via-[#3DB268]/15 to-[#3DB268]/5" />
                     <p className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/30 bg-white/15 px-4 py-3 text-sm font-semibold text-white shadow-lg backdrop-blur-md">{step.previewCaption}</p>
@@ -109,15 +108,6 @@ function TraceabilityStep({ step, index, active, currentStep, registerBadge }) {
             <div ref={badgeRef} className={`relative z-20 col-start-1 row-start-1 flex size-12 items-center justify-center justify-self-center rounded-full border-2 transition-all duration-500 md:col-start-2 md:size-16 ${active ? "border-[#3DB268] bg-[#3DB268] text-white shadow-[0_0_0_8px_rgba(61,178,104,0.18),0_0_24px_rgba(61,178,104,0.5)]" : "border-[#3DB268]/60 bg-white text-[#267A47] shadow-[0_0_0_6px_rgba(61,178,104,0.08)] dark:bg-slate-950 dark:text-[#75D59A]"}`}>
                 {currentStep === index && <span className="absolute inset-0 rounded-full bg-[#3DB268]/40 motion-safe:animate-ping motion-reduce:animate-none" />}
                 <Icon className="relative z-10" size={26} strokeWidth={1.7} />
-            </div>
-            <div className={`relative col-start-2 row-start-2 h-0 overflow-hidden transition-all duration-300 md:hidden ${showPreview ? "mt-3 h-28 opacity-100" : "opacity-0"}`}>
-                {showPreview && (
-                    <div className="relative h-28 overflow-hidden rounded-xl border border-[#3DB268]/30">
-                        <Image fill loading="lazy" sizes="(max-width: 640px) 80vw, 50vw" className="object-cover" src={step.preview} alt={step.previewAlt} />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#14532d]/75 via-[#3DB268]/10 to-transparent" />
-                        <p className="absolute bottom-2 left-3 text-xs font-medium text-white">{step.previewCaption}</p>
-                    </div>
-                )}
             </div>
         </div>
     );
