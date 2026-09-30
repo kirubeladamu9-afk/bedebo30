@@ -40,17 +40,19 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="px-6 pt-8">
+            <section className="bedebo-logo-strip px-6 pt-8">
                 <h3 className="pb-7 text-center text-base font-medium text-slate-400">
                     Trusting by leading brands, including —
                 </h3>
-                <Marquee className="mx-auto max-w-5xl pb-12" gradient={true} speed={25} gradientColor={theme === "dark" ? "#000" : "#fff"}>
-                    <div className="flex items-center justify-center">
-                        {[...companiesLogo, ...companiesLogo].map((company, index) => (
-                            <Image key={index} className="mx-11" src={company.logo} alt={company.name} width={100} height={100} />
-                        ))}
-                    </div>
-                </Marquee>
+                <div className="bedebo-logo-marquee">
+                    <Marquee className="mx-auto max-w-5xl pb-12" gradient={true} speed={25} gradientColor={theme === "dark" ? "#0A120E" : "#fff"}>
+                        <div className="flex items-center justify-center">
+                            {[...companiesLogo, ...companiesLogo].map((company, index) => (
+                                <Image key={index} className="bedebo-logo mx-11" src={company.logo} alt={company.name} width={100} height={100} />
+                            ))}
+                        </div>
+                    </Marquee>
+                </div>
             </section>
 
             <OurStory />

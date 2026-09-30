@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import LenisScroll from "@/components/Lenis";
+import Script from "next/script";
 
 const poppins = Poppins({
     variable: "--font-poppins",
@@ -18,6 +19,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
+                <Script id="theme-init" strategy="beforeInteractive">
+                    {`(() => { const theme = localStorage.getItem("theme"); document.documentElement.classList.toggle("dark", theme !== "light"); })();`}
+                </Script>
                 <ThemeContextProvider>
                     <LenisScroll />
                     {children}

@@ -28,33 +28,28 @@ export default function Navbar() {
             return;
         }
 
-        setActiveSection("home");
-        const sectionTargets = [
-            ["about", "about"],
-            ["solutions", "solutions"],
-            ["impact", "impact"],
-            ["get-involved", "impact"],
-            ["traceability", "impact"],
-            ["blog", "blog"],
-            ["faq", "blog"],
-            ["contact", "blog"],
-        ];
-        const sections = sectionTargets
-            .map(([id, navTarget]) => [document.getElementById(id), navTarget])
-            .filter(([section]) => section);
-        const observer = new IntersectionObserver((entries) => {
-            const visibleSections = entries
-                .filter((entry) => entry.isIntersecting)
-                .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-            const visibleSection = visibleSections[0];
-            if (visibleSection) {
-                const [, navTarget] = sections.find(([section]) => section === visibleSection.target);
-                setActiveSection(navTarget);
-            }
-        }, { rootMargin: "-18% 0px -65% 0px", threshold: [0, 0.1, 0.5, 1] });
+        const targets = navLinks
+            .map(({ href }) => href === "/" ? "home" : href.split("#").pop())
+            .filter((target) => target !== "home");
 
-        sections.forEach(([section]) => observer.observe(section));
-        return () => observer.disconnect();
+        const updateActiveSection = () => {
+            let currentSection = "home";
+            targets.forEach((target) => {
+                const section = document.getElementById(target);
+                if (section && section.getBoundingClientRect().top <= 104) {
+                    currentSection = target;
+                }
+            });
+            setActiveSection(currentSection);
+        };
+
+        updateActiveSection();
+        window.addEventListener("scroll", updateActiveSection, { passive: true });
+        window.addEventListener("resize", updateActiveSection);
+        return () => {
+            window.removeEventListener("scroll", updateActiveSection);
+            window.removeEventListener("resize", updateActiveSection);
+        };
     }, [pathname]);
 
     const resolveHref = (href) => {
@@ -69,14 +64,14 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={`bedebo-site-container fixed inset-x-0 top-0 z-50 flex items-center justify-between py-4 ${openMobileMenu ? "" : "backdrop-blur"} ${pathname === "/" ? "text-[#1E2841]" : ""}`}>
+        <nav className={`bedebo-navbar bedebo-site-container fixed inset-x-0 top-0 z-50 flex items-center justify-between py-4 ${openMobileMenu ? "" : "backdrop-blur"} ${pathname === "/" ? "text-[#1E2841]" : ""}`}>
             <a href="https://prebuiltui.com?utm_source=landing">
-                <Image className="h-9 w-auto shrink-0 md:h-9.5" src="/assets/bedebo-ethiopia.webp" alt="Bedebo Ethiopia" width={140} height={140} priority fetchPriority="high" />
+                <Image className="bedebo-navbar-logo h-9 w-auto shrink-0 md:h-9.5" src="/assets/bedebo-ethiopia.webp" alt="Bedebo Ethiopia" width={140} height={140} priority fetchPriority="high" />
             </a>
             <div className="hidden flex-1 items-center justify-center gap-5 xl:flex xl:gap-7">
                 {navLinks.map((link) => {
                     const active = isActiveLink(link);
-                    return <Link key={link.name} href={resolveHref(link.href)} aria-current={active ? "location" : undefined} className={`rounded-sm transition-colors hover:text-[#3DB268] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] ${active ? "font-semibold text-[#3DB268]" : ""}`}>{link.name}</Link>;
+                    return <Link key={link.name} href={resolveHref(link.href)} aria-current={active ? "location" : undefined} className={`bedebo-nav-link rounded-sm transition-colors hover:text-[#3DB268] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] ${active ? "font-semibold text-[#3DB268]" : ""}`}>{link.name}</Link>;
                 })}
             </div>
             <div className="flex items-center gap-4">
@@ -88,10 +83,10 @@ export default function Navbar() {
                     {openMobileMenu ? <XIcon size={26} /> : <MenuIcon size={26} className="active:scale-90 transition" />}
                 </button>
             </div>
-            <div className={`fixed inset-0 flex flex-col items-center justify-center gap-6 bg-white/60 text-lg font-medium backdrop-blur-md transition duration-300 dark:bg-black/40 xl:hidden ${openMobileMenu ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className={`bedebo-mobile-menu fixed inset-0 flex flex-col items-center justify-center gap-6 bg-white/60 text-lg font-medium backdrop-blur-md transition duration-300 dark:bg-black/40 xl:hidden ${openMobileMenu ? "translate-x-0" : "-translate-x-full"}`}>
                 {navLinks.map((link) => {
                     const active = isActiveLink(link);
-                    return <Link key={link.name} href={resolveHref(link.href)} aria-current={active ? "location" : undefined} className={`rounded-sm transition-colors hover:text-[#3DB268] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] ${active ? "font-semibold text-[#3DB268]" : ""}`} onClick={() => setOpenMobileMenu(false)}>{link.name}</Link>;
+                    return <Link key={link.name} href={resolveHref(link.href)} aria-current={active ? "location" : undefined} className={`bedebo-nav-link rounded-sm transition-colors hover:text-[#3DB268] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3DB268] ${active ? "font-semibold text-[#3DB268]" : ""}`} onClick={() => setOpenMobileMenu(false)}>{link.name}</Link>;
                 })}
                 <Link href={resolveHref("#contact")} className="rounded-md bg-[#267A47] px-6 py-3 text-white transition hover:bg-[#1E663A]" onClick={() => setOpenMobileMenu(false)}>
                     Contact Us

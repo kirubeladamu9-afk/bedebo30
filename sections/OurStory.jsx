@@ -27,10 +27,9 @@ export default function OurStory() {
                         )}
                     />
                     <blockquote className="about-quote">
+                        <span className="about-quote-mark about-quote-mark--open" aria-hidden="true">“</span>
                         <p>
-                            <span className="about-quote-mark about-quote-mark--open" aria-hidden="true">“</span>
-                            To leverage digital innovation and sustainable energy to improve market access,{" "}
-                            <span className="about-quote-ending">productivity<span className="about-quote-mark about-quote-mark--close" aria-hidden="true">”</span></span>
+                            To leverage digital innovation and sustainable energy to improve market access, productivity<span className="about-quote-mark about-quote-mark--close" aria-hidden="true">”</span>
                         </p>
                     </blockquote>
                 </div>
